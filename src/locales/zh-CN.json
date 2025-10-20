@@ -1,0 +1,365 @@
+{
+  "extName": "Feed Sentry",
+  "extDescription": "Feed Sentry 是一款极简 RSS 扩展，提供通知、关键词筛选和文件夹收藏，帮助你掌握重要订阅。",
+  "common": {
+    "actions": {
+      "cancel": "取消",
+      "save": "保存",
+      "delete": "删除"
+    }
+  },
+  "app": {
+    "name": "Feed Sentry"
+  },
+  "components": {
+    "tagInput": {
+      "placeholder": "输入关键字后回车"
+    },
+    "feedList": {
+      "empty": "暂无订阅源"
+    }
+  },
+  "options": {
+    "layout": {
+      "title": "Feed Sentry 管理页面"
+    },
+    "menu": {
+      "rss": "RSS 订阅",
+      "settings": "插件设置",
+      "manage": "订阅管理",
+      "favorites": "收藏管理"
+    },
+    "rssSubscribe": {
+      "currentFeedLabel": "当前订阅：{title}",
+      "allFeeds": "全部订阅",
+      "feedNotFound": "未找到订阅源",
+      "searchPlaceholder": "搜索条目",
+      "actions": {
+        "refresh": "刷新",
+        "markAllRead": "全部标记为已读"
+      },
+      "keywordFilter": {
+        "label": "关键词筛选",
+        "unavailable": "当前视图尚未配置关键字，无法启用筛选。"
+      },
+      "messages": {
+        "markAllAllSuccess": "已标记全部条目为已读。",
+        "markAllFeedSuccess": "已标记该订阅条目为已读。",
+        "markAllError": "标记为已读失败。",
+        "missingLink": "该条目没有可打开的链接。",
+        "openEntryError": "打开条目失败。",
+        "loadFeedsError": "订阅源加载失败。",
+        "loadEntriesError": "条目加载失败。"
+      }
+    },
+    "entryTable": {
+      "columns": {
+        "title": "标题",
+        "author": "作者",
+        "time": "时间",
+        "operations": "操作",
+        "feed": "订阅源"
+      },
+      "fallbacks": {
+        "unknownAuthor": "未知作者",
+        "unknownFeed": "未知订阅源"
+      },
+      "actions": {
+        "favorite": "加入收藏",
+        "unfavorite": "取消收藏"
+      },
+      "messages": {
+        "favoriteAdded": "已加入收藏。",
+        "favoriteRemoved": "已取消收藏。",
+        "favoriteError": "更新收藏状态失败。"
+      }
+    },
+    "feedEditDialog": {
+      "titles": {
+        "create": "新增订阅源",
+        "edit": "编辑订阅源"
+      },
+      "fields": {
+        "title": {
+          "label": "标题",
+          "placeholder": "请输入订阅源标题"
+        },
+        "link": {
+          "label": "链接",
+          "placeholder": "请输入订阅源链接"
+        }
+      },
+      "validation": {
+        "titleRequired": "请输入标题",
+        "linkRequired": "请输入链接",
+        "linkInvalid": "请输入合法的 URL（需包含 http/https）"
+      }
+    },
+    "feedManage": {
+      "searchPlaceholder": "搜索标题或链接",
+      "actions": {
+        "create": "新增订阅",
+        "editAria": "编辑订阅",
+        "deleteAria": "删除订阅",
+        "testNotification": "测试发送通知"
+      },
+      "columns": {
+        "title": "标题",
+        "link": "链接",
+        "pollInterval": "拉取间隔 (秒)",
+        "notify": "消息通知",
+        "keywords": "关键字",
+        "keywordNotify": "关键字通知",
+        "unread": "未读",
+        "status": "状态",
+        "actions": "操作"
+      },
+      "validation": {
+        "pollIntervalMin": "拉取间隔必须大于等于 60 秒。"
+      },
+      "keywords": {
+        "placeholder": "输入关键字后回车",
+        "separator": "、"
+      },
+      "tooltips": {
+        "edit": "编辑"
+      },
+      "modals": {
+        "deleteTitle": "删除订阅",
+        "deleteHint": "确定删除订阅「{title}」？该操作无法撤销。"
+      },
+      "confirmations": {
+        "deleteFeed": "确定删除该订阅源？",
+        "removeKeywords": {
+          "title": "确认删除关键字",
+          "content": "确定删除关键字「{keywords}」？"
+        }
+      },
+      "messages": {
+        "loadError": "获取订阅源列表失败。",
+        "createSuccess": "订阅源创建成功。",
+        "updateSuccess": "订阅源更新成功。",
+        "createError": "创建订阅源失败。",
+        "updateError": "更新订阅源失败。",
+        "pollIntervalUpdated": "拉取间隔已更新。",
+        "pollIntervalUpdateError": "更新拉取间隔失败。",
+        "statusEnabled": "订阅已启用。",
+        "statusDisabled": "订阅已停用。",
+        "statusError": "更新订阅状态失败。",
+        "notifyEnabled": "通知已开启。",
+        "notifyDisabled": "通知已关闭。",
+        "notifyError": "更新通知开关失败。",
+        "keywordNotifyEnabled": "关键字通知已开启。",
+        "keywordNotifyDisabled": "关键字通知已关闭。",
+        "keywordNotifyError": "更新关键字通知失败。",
+        "deleteSuccess": "订阅源已删除。",
+        "deleteError": "删除订阅源失败。",
+        "keywordsUpdated": "关键字已更新。",
+        "keywordsRemoved": "关键字已删除。",
+        "keywordsAdded": "关键字已新增。",
+        "keywordsUpdateError": "更新关键字失败。",
+        "testNotificationSuccess": "测试通知已发送。",
+        "testNotificationError": "测试通知发送失败。",
+        "permissionRequired": "需要授予该站点访问权限才能添加此订阅，请在提示中点击允许。"
+      }
+    },
+    "pluginSettings": {
+      "alerts": {
+        "syncHint": "调整主题与语言后会立即同步到弹层与后台。",
+        "autoSave": "设置项会自动保存并广播至所有页面，无需额外操作。"
+      },
+      "messages": {
+        "updated": "设置已更新"
+      }
+    },
+    "pluginSettingsPanel": {
+      "sectionTitle": "界面",
+      "theme": {
+        "label": "主题",
+        "placeholder": "选择主题",
+        "options": {
+          "auto": "跟随系统",
+          "light": "亮色模式",
+          "dark": "暗色模式"
+        }
+      },
+      "locale": {
+        "label": "语言",
+        "placeholder": "选择语言",
+        "options": {
+          "system": "跟随系统",
+          "zhCN": "简体中文",
+          "en": "English"
+        }
+      }
+    },
+    "favorites": {
+      "sidebar": {
+        "title": "收藏管理",
+        "all": "全部"
+      },
+      "actions": {
+        "newFolder": "新建收藏夹",
+        "addLink": "新增链接",
+        "search": "搜索",
+        "moveSelected": "移动所选",
+        "removeSelected": "删除所选",
+        "openLink": "打开",
+        "removeSingle": "删除"
+      },
+      "labels": {
+        "defaultFolder": "默认"
+      },
+      "search": {
+        "placeholder": "搜索收藏内容"
+      },
+      "move": {
+        "placeholder": "移动到…"
+      },
+      "headers": {
+        "empty": "收藏",
+        "currentFolder": "当前文件夹：{name}",
+        "all": "全部收藏"
+      },
+      "columns": {
+        "title": "标题",
+        "link": "链接",
+        "source": "来源",
+        "addedAt": "时间",
+        "actions": "操作",
+        "folder": "收藏夹"
+      },
+      "fallbacks": {
+        "missingLink": "未提供链接",
+        "unknownFolder": "未知收藏夹"
+      },
+      "sources": {
+        "subscription": "订阅条目",
+        "manual": "手动添加"
+      },
+      "messages": {
+        "noFolders": "暂无收藏夹",
+        "empty": "暂无收藏内容，可在弹窗中收藏。",
+        "folderNameRequired": "请输入文件夹名称。",
+        "folderCreated": "收藏夹已创建。",
+        "folderRenamed": "收藏夹已重命名。",
+        "folderSaveFailed": "保存收藏夹失败。",
+        "folderDeleted": "收藏夹已删除。",
+        "folderDeleteFailed": "删除收藏夹失败。",
+        "moveSameFolder": "已在当前文件夹中。",
+        "moveSuccess": "收藏已移动。",
+        "moveFailed": "移动收藏失败。",
+        "removeSuccess": "收藏已删除。",
+        "removeFailed": "删除收藏失败。",
+        "missingLink": "该收藏没有可打开的链接。",
+        "openLinkFailed": "打开链接失败。",
+        "loadFoldersFailed": "加载收藏夹失败。",
+        "loadFavoritesFailed": "加载收藏内容失败。",
+        "manualAddSuccess": "链接已加入收藏。",
+        "manualAddFailed": "保存链接失败。"
+      },
+      "validation": {
+        "manualTitleRequired": "请输入标题。",
+        "manualLinkRequired": "请输入链接。",
+        "manualLinkInvalid": "请输入合法的 URL（需包含 http/https）。"
+      },
+      "modals": {
+        "createTitle": "新建收藏夹",
+        "renameTitle": "重命名收藏夹",
+        "namePlaceholder": "输入收藏夹名称",
+        "deleteTitle": "删除收藏夹",
+        "deleteConfirm": "删除",
+        "deleteHint": "如何处理“{name}”中的收藏？",
+        "deleteEmptyHint": "“{name}”为空，确认删除？",
+        "deleteMoveToDefault": "移动到默认收藏夹",
+        "deleteRemoveAll": "删除全部收藏",
+        "removeTitle": "删除收藏",
+        "removeConfirm": "删除",
+        "removeHintSingle": "确认删除该收藏？",
+        "removeHintMultiple": "确认删除选中的 {count} 个收藏？"
+      },
+      "folderActions": {
+        "rename": "重命名",
+        "delete": "删除收藏夹"
+      },
+      "manual": {
+        "title": "新增收藏链接",
+        "fields": {
+          "title": "标题",
+          "link": "链接",
+          "folder": "目标收藏夹"
+        },
+        "placeholders": {
+          "title": "请输入标题",
+          "link": "请输入链接（需包含 http/https）"
+        }
+      }
+    }
+  },
+  "background": {
+    "feedService": {
+      "keywordMatchMessage": "匹配到的关键字：{keywords}",
+      "feedUpdateSummary": "有{count}条新内容，点击查看！",
+      "combinedSummary": "RSS订阅有{total}条新内容，其中{matched}条命中关键字，点击查看！"
+    },
+    "messaging": {
+      "testNotificationTitle": "Feed Sentry 测试通知",
+      "testNotificationMessage": "这是一条测试通知。"
+    }
+  },
+  "popup": {
+    "app": {
+      "actions": {
+        "openOptions": "打开管理页面"
+      },
+      "buttons": {
+        "backToFeeds": "返回订阅源"
+      },
+      "labels": {
+        "unread": "未读",
+        "allFeeds": "全部订阅",
+        "unknownFeed": "未知订阅源"
+      },
+      "messages": {
+        "limitReached": "已达到快捷查看最多 {max} 条的展示上限。",
+        "loadFeedsError": "加载订阅源失败。",
+        "loadEntriesError": "加载条目失败。",
+        "missingLink": "该条目没有可打开的链接。",
+        "openLinkError": "无法打开链接。",
+        "markAllSuccess": "已全部标记为已读。",
+        "markAllFailure": "标记失败。",
+        "openOptionsError": "无法打开管理页面。"
+      }
+    },
+    "entryList": {
+      "labels": {
+        "unknownFeed": "未知订阅源"
+      },
+      "messages": {
+        "noMore": "没有更多内容",
+        "empty": "暂无条目",
+        "limitDefault": "已达到展示上限。",
+        "favoriteAdded": "已加入收藏。",
+        "favoriteRemoved": "已取消收藏。",
+        "favoriteError": "更新收藏状态失败。"
+      },
+      "actions": {
+        "backToTop": "返回顶部",
+        "favorite": "收藏",
+        "unfavorite": "取消收藏"
+      }
+    },
+    "viewSwitcher": {
+      "options": {
+        "all": "全部",
+        "feeds": "订阅源"
+      },
+      "tooltip": {
+        "markAllRead": "全部标记为已读"
+      },
+      "aria": {
+        "markAllRead": "全部标记为已读"
+      }
+    }
+  }
+}

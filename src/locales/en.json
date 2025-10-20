@@ -1,0 +1,365 @@
+{
+  "extName": "Feed Sentry",
+  "extDescription": "Feed Sentry is a minimalist RSS extension with notifications, keyword filters, and folder favorites for staying on top of feeds.",
+  "common": {
+    "actions": {
+      "cancel": "Cancel",
+      "save": "Save",
+      "delete": "Delete"
+    }
+  },
+  "app": {
+    "name": "Feed Sentry"
+  },
+  "components": {
+    "tagInput": {
+      "placeholder": "Enter keywords and press Enter"
+    },
+    "feedList": {
+      "empty": "No feeds yet"
+    }
+  },
+  "options": {
+    "layout": {
+      "title": "Feed Sentry Dashboard"
+    },
+    "menu": {
+      "rss": "RSS Subscriptions",
+      "favorites": "Favorites Management",
+      "manage": "Feed Management",
+      "settings": "Extension Settings"
+    },
+    "rssSubscribe": {
+      "currentFeedLabel": "Current feed: {title}",
+      "allFeeds": "All feeds",
+      "feedNotFound": "Feed not found",
+      "searchPlaceholder": "Search entries",
+      "actions": {
+        "refresh": "Refresh",
+        "markAllRead": "Mark all as read"
+      },
+      "keywordFilter": {
+        "label": "Keyword filter",
+        "unavailable": "No keywords are configured for this view yet."
+      },
+      "messages": {
+        "markAllAllSuccess": "All entries have been marked as read.",
+        "markAllFeedSuccess": "Entries in this feed have been marked as read.",
+        "markAllError": "Failed to mark entries as read.",
+        "missingLink": "This entry has no link to open.",
+        "openEntryError": "Failed to open the entry.",
+        "loadFeedsError": "Failed to load feeds.",
+        "loadEntriesError": "Failed to load entries."
+      }
+    },
+    "favorites": {
+      "sidebar": {
+        "title": "Favorites Management",
+        "all": "All"
+      },
+      "actions": {
+        "newFolder": "New folder",
+        "addLink": "Add link",
+        "search": "Search",
+        "moveSelected": "Move selected",
+        "removeSelected": "Remove selected",
+        "openLink": "Open",
+        "removeSingle": "Remove"
+      },
+      "labels": {
+        "defaultFolder": "Default"
+      },
+      "search": {
+        "placeholder": "Search favorites"
+      },
+      "move": {
+        "placeholder": "Move to..."
+      },
+      "headers": {
+        "empty": "Favorites",
+        "currentFolder": "Folder: {name}",
+        "all": "All favorites"
+      },
+      "columns": {
+        "title": "Title",
+        "link": "Link",
+        "source": "Source",
+        "addedAt": "Added",
+        "actions": "Actions",
+        "folder": "Folder"
+      },
+      "fallbacks": {
+        "missingLink": "No link provided",
+        "unknownFolder": "Unknown folder"
+      },
+      "sources": {
+        "subscription": "Subscription",
+        "manual": "Manual"
+      },
+      "messages": {
+        "noFolders": "No folders yet",
+        "empty": "No favorites yet. Use the popup to add some.",
+        "folderNameRequired": "Please enter a folder name.",
+        "folderCreated": "Folder created.",
+        "folderRenamed": "Folder renamed.",
+        "folderSaveFailed": "Failed to save folder.",
+        "folderDeleted": "Folder deleted.",
+        "folderDeleteFailed": "Failed to delete folder.",
+        "moveSameFolder": "Items are already in this folder.",
+        "moveSuccess": "Favorites moved.",
+        "moveFailed": "Failed to move favorites.",
+        "removeSuccess": "Favorites removed.",
+        "removeFailed": "Failed to remove favorites.",
+        "missingLink": "This favorite has no link to open.",
+        "openLinkFailed": "Failed to open the link.",
+        "loadFoldersFailed": "Failed to load folders.",
+        "loadFavoritesFailed": "Failed to load favorites.",
+        "manualAddSuccess": "Link saved to favorites.",
+        "manualAddFailed": "Failed to save link."
+      },
+      "validation": {
+        "manualTitleRequired": "Please enter a title.",
+        "manualLinkRequired": "Please enter a link.",
+        "manualLinkInvalid": "Please enter a valid URL (include http/https)."
+      },
+      "modals": {
+        "createTitle": "Create folder",
+        "renameTitle": "Rename folder",
+        "namePlaceholder": "Enter folder name",
+        "deleteTitle": "Delete folder",
+        "deleteConfirm": "Delete",
+        "deleteHint": "What should be done with items in \"{name}\"?",
+        "deleteEmptyHint": "\"{name}\" is empty. Delete this folder?",
+        "deleteMoveToDefault": "Move to default folder",
+        "deleteRemoveAll": "Remove all items",
+        "removeTitle": "Remove favorites",
+        "removeConfirm": "Remove",
+        "removeHintSingle": "Remove this favorite?",
+        "removeHintMultiple": "Remove {count} selected favorites?"
+      },
+      "folderActions": {
+        "rename": "Rename",
+        "delete": "Delete folder"
+      },
+      "manual": {
+        "title": "Add link",
+        "fields": {
+          "title": "Title",
+          "link": "Link",
+          "folder": "Folder"
+        },
+        "placeholders": {
+          "title": "Enter title",
+          "link": "Enter link (include http/https)"
+        }
+      }
+    },
+    "entryTable": {
+      "columns": {
+        "title": "Title",
+        "author": "Author",
+        "time": "Time",
+        "operations": "Actions",
+        "feed": "Feed"
+      },
+      "fallbacks": {
+        "unknownAuthor": "Unknown author",
+        "unknownFeed": "Unknown feed"
+      },
+      "actions": {
+        "favorite": "Add to favorites",
+        "unfavorite": "Remove from favorites"
+      },
+      "messages": {
+        "favoriteAdded": "Saved to favorites.",
+        "favoriteRemoved": "Removed from favorites.",
+        "favoriteError": "Failed to update favorite status."
+      }
+    },
+    "feedEditDialog": {
+      "titles": {
+        "create": "Add Feed",
+        "edit": "Edit Feed"
+      },
+      "fields": {
+        "title": {
+          "label": "Title",
+          "placeholder": "Enter feed title"
+        },
+        "link": {
+          "label": "Link",
+          "placeholder": "Enter feed URL"
+        }
+      },
+      "validation": {
+        "titleRequired": "Please enter a title",
+        "linkRequired": "Please enter a link",
+        "linkInvalid": "Please enter a valid URL including http/https"
+      }
+    },
+    "feedManage": {
+      "searchPlaceholder": "Search title or link",
+      "actions": {
+        "create": "Add feed",
+        "testNotification": "Test notification",
+        "editAria": "Edit feed",
+        "deleteAria": "Delete feed"
+      },
+      "columns": {
+        "title": "Title",
+        "link": "Link",
+        "pollInterval": "Poll interval (s)",
+        "notify": "Notifications",
+        "keywords": "Keywords",
+        "keywordNotify": "Keyword notifications",
+        "unread": "Unread",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "validation": {
+        "pollIntervalMin": "Poll interval must be at least 60 seconds."
+      },
+      "keywords": {
+        "placeholder": "Press Enter to add keywords",
+        "separator": ", "
+      },
+      "tooltips": {
+        "edit": "Edit"
+      },
+      "modals": {
+        "deleteTitle": "Delete feed",
+        "deleteHint": "Are you sure you want to delete \"{title}\"? This action cannot be undone."
+      },
+      "confirmations": {
+        "deleteFeed": "Delete this feed?",
+        "removeKeywords": {
+          "title": "Remove keywords",
+          "content": "Remove keywords: {keywords}?"
+        }
+      },
+      "messages": {
+        "loadError": "Failed to load feeds.",
+        "createSuccess": "Feed created.",
+        "updateSuccess": "Feed updated.",
+        "createError": "Failed to create feed.",
+        "updateError": "Failed to update feed.",
+        "pollIntervalUpdated": "Poll interval updated.",
+        "pollIntervalUpdateError": "Failed to update poll interval.",
+        "statusEnabled": "Feed enabled.",
+        "statusDisabled": "Feed disabled.",
+        "statusError": "Failed to update feed status.",
+        "notifyEnabled": "Notifications enabled.",
+        "notifyDisabled": "Notifications disabled.",
+        "notifyError": "Failed to update notifications.",
+        "keywordNotifyEnabled": "Keyword notifications enabled.",
+        "keywordNotifyDisabled": "Keyword notifications disabled.",
+        "keywordNotifyError": "Failed to update keyword notifications.",
+        "deleteSuccess": "Feed deleted.",
+        "deleteError": "Failed to delete feed.",
+        "keywordsUpdated": "Keywords updated.",
+        "keywordsRemoved": "Keywords removed.",
+        "keywordsAdded": "Keywords added.",
+        "keywordsUpdateError": "Failed to update keywords.",
+        "testNotificationSuccess": "Test notification sent.",
+        "testNotificationError": "Failed to send test notification.",
+        "permissionRequired": "Site access is required to add this feed. Please approve the permission prompt."
+      }
+    },
+    "pluginSettings": {
+      "alerts": {
+        "syncHint": "Theme and language changes sync instantly to the popup and background.",
+        "autoSave": "Settings are saved automatically and broadcast to all pages."
+      },
+      "messages": {
+        "updated": "Settings updated"
+      }
+    },
+    "pluginSettingsPanel": {
+      "sectionTitle": "Interface",
+      "theme": {
+        "label": "Theme",
+        "placeholder": "Choose a theme",
+        "options": {
+          "auto": "Follow system",
+          "light": "Light mode",
+          "dark": "Dark mode"
+        }
+      },
+      "locale": {
+        "label": "Language",
+        "placeholder": "Choose a language",
+        "options": {
+          "system": "Follow system",
+          "zhCN": "Simplified Chinese",
+          "en": "English"
+        }
+      }
+    }
+  },
+  "background": {
+    "feedService": {
+      "keywordMatchMessage": "Matched keywords: {keywords}",
+      "feedUpdateSummary": "There are {count} new items. Check your feed!",
+      "combinedSummary": "{total} new items available, {matched} matched keywords. Click to view!"
+    },
+    "messaging": {
+      "testNotificationTitle": "Feed Sentry Test",
+      "testNotificationMessage": "This is a test notification."
+    }
+  },
+  "popup": {
+    "app": {
+      "actions": {
+        "openOptions": "Open options page"
+      },
+      "buttons": {
+        "backToFeeds": "Back to feeds"
+      },
+      "labels": {
+        "unread": "Unread",
+        "allFeeds": "All feeds",
+        "unknownFeed": "Unknown feed"
+      },
+      "messages": {
+        "limitReached": "Reached the quick view limit of {max} entries.",
+        "loadFeedsError": "Failed to load feeds.",
+        "loadEntriesError": "Failed to load entries.",
+        "missingLink": "This entry has no link to open.",
+        "openLinkError": "Failed to open link.",
+        "markAllSuccess": "All entries marked as read.",
+        "markAllFailure": "Failed to mark entries as read.",
+        "openOptionsError": "Unable to open options page."
+      }
+    },
+    "entryList": {
+      "labels": {
+        "unknownFeed": "Unknown feed"
+      },
+      "messages": {
+        "noMore": "No more content",
+        "empty": "No entries available",
+        "limitDefault": "Display limit reached.",
+        "favoriteAdded": "Saved to favorites.",
+        "favoriteRemoved": "Removed from favorites.",
+        "favoriteError": "Failed to update favorite status."
+      },
+      "actions": {
+        "backToTop": "Back to top",
+        "favorite": "Add to favorites",
+        "unfavorite": "Remove favorite"
+      }
+    },
+    "viewSwitcher": {
+      "options": {
+        "all": "All",
+        "feeds": "Feeds"
+      },
+      "tooltip": {
+        "markAllRead": "Mark all as read"
+      },
+      "aria": {
+        "markAllRead": "Mark all as read"
+      }
+    }
+  }
+}

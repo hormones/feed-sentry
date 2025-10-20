@@ -1,0 +1,96 @@
+# =========================
+# Node / npm / pnpm / yarn
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# =========================
+# AI
+# =========================
+AI/
+AGENTS.md
+CLAUDE.md
+.claude/
+
+# =========================
+# WXT Framework
+# =========================
+.wxt/
+.output/
+vendors
+
+# =========================
+# Local vendor packages
+# =========================
+*.tgz
+
+# =========================
+# Auto-generated type definitions
+# =========================
+auto-imports.d.ts
+components.d.ts
+
+# ==============
+# Build outputs
+# ==============
+dist/
+build/
+out/
+coverage/
+*.zip
+
+# ==============
+# Chrome Extension
+# ==============
+# 打包后的插件文件夹或压缩包
+*.crx
+*.pem
+!files/*
+
+# 临时编译/开发文件
+manifest.json~
+*.local.json
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# System files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+nul
+
+# =========================
+# TypeScript / JS Tools
+# =========================
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+
+# =========================
+# Test related
+# =========================
+jest-cache/
+jest-tmp/
+.playwright/
+.cypress/
+test-results/
