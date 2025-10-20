@@ -1,3 +1,10 @@
+import packageJson from '../../package.json' assert { type: 'json' };
+
+const DEFAULT_USER_AGENT =
+  typeof navigator !== 'undefined' && navigator.userAgent
+    ? navigator.userAgent
+    : `FeedSentry/${packageJson.version}`;
+
 // ==================== Message Types ====================
 
 /**
@@ -83,7 +90,7 @@ export const HTTP_CLIENT = {
   TIMEOUT: 15000, // 15 seconds
   MAX_RETRIES: 3,
   RETRY_DELAY: 1000, // 1 second
-  USER_AGENT: 'FeedSentry/0.1.0',
+  USER_AGENT: DEFAULT_USER_AGENT,
 } as const;
 
 // ==================== UI Constants ====================

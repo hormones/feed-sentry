@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
+import packageJson from './package.json' assert { type: 'json' };
 
 export default defineConfig({
   modules: ['@wxt-dev/i18n/module'],
@@ -12,7 +13,7 @@ export default defineConfig({
     default_locale: 'en',
     name: '__MSG_extName__',
     description: '__MSG_extDescription__',
-    version: '0.1.0',
+    version: packageJson.version,
     icons: {
       16: '/icon/icon16.png',
       32: '/icon/icon32.png',
