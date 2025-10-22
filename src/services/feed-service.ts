@@ -985,34 +985,6 @@ export async function updateLastSync(feedId: string): Promise<void> {
   await db.feeds.update(feedId, { lastSyncAt: timestamp, updateTime: timestamp });
 }
 
-export default {
-  // Feed operations
-  addFeed,
-  updateFeed,
-  deleteFeed,
-  getFeed,
-  getAllFeeds,
-  searchFeeds,
-
-  // Entry operations
-  addEntries,
-  queryEntries,
-  queryEntriesInfinite,
-  toggleEntryRead,
-  markEntryAsRead,
-  markAllAsRead,
-  getUnreadCount,
-
-  // Feed status operations
-  incrementFailureCount,
-  resetFailureCount,
-  updateLastSync,
-
-  // Utilities
-  generateFeedId,
-  generateEntryId,
-};
-
 async function attachFavoriteMetadata(entries: Entry[]): Promise<Entry[]> {
   if (!entries.length) {
     return entries;

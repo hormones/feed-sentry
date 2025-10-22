@@ -151,9 +151,3 @@ export function t(key: string, params?: MessageParams, explicitLocale?: Resolved
   console.warn('[i18n] Missing translation for key:', key);
   return key;
 }
-
-export async function preloadLocales(locales: LocalePreference[]): Promise<void> {
-  await Promise.all(locales.map(locale => ensureLocaleLoaded(resolveLocalePreference(locale))));
-}
-
-export const availableLocales = Object.keys(LOCALE_FILES) as ResolvedLocale[];

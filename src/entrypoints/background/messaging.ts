@@ -35,15 +35,6 @@ export interface FeedDisabledPayload {
   reason: string;
 }
 
-export interface EntriesAddedPayload {
-  feedId: string;
-  count: number;
-}
-
-export interface BadgeUpdatePayload {
-  count: number;
-}
-
 export interface TestNotificationPayload {
   title?: string;
   message?: string;
@@ -281,17 +272,3 @@ export function setupMessageListener(): void {
 
   console.log('[Messaging] Message listener setup complete');
 }
-
-export default {
-  createMessage,
-  broadcastMessage,
-  sendMessageToTab,
-  updateBadge,
-  showNotification,
-  notifySyncStarted,
-  notifySyncCompleted,
-  notifySyncFailed,
-  notifyFeedDisabled,
-  sendTestNotification,
-  setupMessageListener,
-};

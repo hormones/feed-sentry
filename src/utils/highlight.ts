@@ -82,10 +82,3 @@ export function buildFeedKeywordMap<T extends { id: string; keywords?: string[] 
 
   return map;
 }
-
-export default {
-  highlightText,
-  renderHighlighted,
-  normalizeKeywords,
-  buildFeedKeywordMap,
-};

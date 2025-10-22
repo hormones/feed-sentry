@@ -281,11 +281,3 @@ export async function syncAllFeeds(): Promise<void> {
   console.log('[RSS Poller] Manual sync all requested');
   await pollAllFeeds();
 }
-
-export default {
-  startPoller,
-  stopPoller,
-  restartPoller,
-  syncFeed,
-  syncAllFeeds,
-};

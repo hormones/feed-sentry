@@ -103,5 +103,3 @@ export const useFavoritesStore = defineStore('favorites', () => {
     initialize,
   };
 });
-
-export default useFavoritesStore;

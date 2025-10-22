@@ -205,14 +205,6 @@ export const db: FeedSentryDB = new Proxy(proxyTarget, {
   },
 });
 
-export function ensureDatabase(): FeedSentryDB {
-  return requireDatabase();
-}
-
-export function isIndexedDBAvailable(): boolean {
-  return indexedDbSupported;
-}
-
 if (indexedDbSupported) {
   const instance = requireDatabase();
   instance.initialize().catch(error => {
@@ -221,8 +213,6 @@ if (indexedDbSupported) {
 } else {
   console.warn('[DB] IndexedDB API missing. Database layer disabled until the environment provides IndexedDB.');
 }
-
-export default db;
 
 function generateUuid(): string {
   if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {

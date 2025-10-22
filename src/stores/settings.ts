@@ -260,5 +260,3 @@ export const useSettingsStore = defineStore('settings', () => {
     detectSystemLocale,
   };
 });
-
-export default useSettingsStore;

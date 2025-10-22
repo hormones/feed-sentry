@@ -119,14 +119,3 @@ export const NOTIFICATION_PRIORITY = {
   NORMAL: 1,
   HIGH: 2,
 } as const;
-
-export default {
-  MessageType,
-  STORAGE_KEYS,
-  RSS_POLLER,
-  FEED_LIMITS,
-  DEFAULT_SETTINGS,
-  HTTP_CLIENT,
-  UI,
-  NOTIFICATION_PRIORITY,
-};
