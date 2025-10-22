@@ -6,16 +6,12 @@ import { HTTP_CLIENT } from '@/constants';
 // RSS parser instance
 const rssParser = new Parser({
   timeout: HTTP_CLIENT.TIMEOUT,
-  headers: {
-    'User-Agent': HTTP_CLIENT.USER_AGENT,
-  },
 });
 
 // Axios instance configuration
 const httpClient: AxiosInstance = axios.create({
   timeout: HTTP_CLIENT.TIMEOUT,
   headers: {
-    'User-Agent': HTTP_CLIENT.USER_AGENT,
     'Accept': 'application/rss+xml, application/xml, text/xml, application/atom+xml, */*',
   },
 });
